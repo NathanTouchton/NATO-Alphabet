@@ -1,4 +1,4 @@
-names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+# TODO 1: Create a dictionary in this format:
+# {"A": "Alpha", "B": Bravo}
 
-caps_names = [name.upper() for name in names if len(name) > 5]
-print(caps_names)
+# TODO 2: Create a list of phonetic code words from word user inputs
