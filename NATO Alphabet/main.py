@@ -12,6 +12,16 @@ alphabet_dict = {row.letter:row.code for (index, row) in data.iterrows()}
 
 user_word = input("Pick a word to translate into NATO alphabet: ").upper()
 
-nato_list = [alphabet_dict[letter] for letter in user_word]
+def generate_nato_list(word):
+    try:
+        nato_list = [alphabet_dict[letter] for letter in word]
 
-print(nato_list)
+    except KeyError:
+        print("Sorry, please enter only letters.")
+        user_word = input("Pick a word to translate into NATO alphabet: ").upper()
+        generate_nato_list(user_word)
+
+    else:
+        print(nato_list)
+
+generate_nato_list(user_word)
